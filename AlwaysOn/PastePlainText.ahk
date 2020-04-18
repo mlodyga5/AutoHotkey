@@ -1,4 +1,4 @@
-﻿#Include _InitialSetup.ahk
+﻿#Include C:\Wszystko\AutoHotkey\_InitialSetup.ahk
 
 ^#v::                            ; Text–only paste from ClipBoard
    Clip0 = %ClipBoardAll%

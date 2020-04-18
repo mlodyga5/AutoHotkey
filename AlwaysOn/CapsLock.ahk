@@ -1,4 +1,4 @@
-﻿#Include _InitialSetup.ahk
+﻿#Include C:\Wszystko\AutoHotkey\_InitialSetup.ahk
 
 ; Autohotkey Capslock Remapping Script 
 ; Danik

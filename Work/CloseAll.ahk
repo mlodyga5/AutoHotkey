@@ -1,7 +1,8 @@
 #Include C:\Wszystko\AutoHotkey\_InitialSetup.ahk
 
 Process, Close, rider64.exe
-Loop *.lnk
+Process, Close, rider64.exe
+Loop Shortcuts\*.lnk
 {
 	if (A_LoopFileName != "Code.lnk")
 		exeName := StrReplace(A_LoopFileName, "lnk", "exe")

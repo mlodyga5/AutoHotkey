@@ -2,7 +2,7 @@
 
 Process, Close, VpnGui.exe
 sleep 1000
-Run VpnGui
+Run Shortcuts\VpnGui
 sleep 6000
 
 SetTitleMatchMode, 2 ; contains

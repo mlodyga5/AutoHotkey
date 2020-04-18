@@ -8,7 +8,7 @@ Loop *
 		Process, Exist, %exeName%
 		
     	If Not ErrorLevel ; errorlevel will = 0 if process doesn't exist
-			Run %A_LoopFileName%
+			Run %A_AhkPath% %A_LoopFileName%
 	}
 }
 
