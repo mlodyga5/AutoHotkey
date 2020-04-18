@@ -1,7 +1,6 @@
 #Include C:\Wszystko\AutoHotkey\_InitialSetup.ahk
 
-Run _RunVpn.ahk
-Sleep 6500
+#Include _RunVpn.ahk
 
 programsToRun := ["Code", "DBeaver", "FirefoxDev", "Outlook", "Teams"]
 for index, program in programsToRun
