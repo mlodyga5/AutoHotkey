@@ -38,7 +38,7 @@
 ; also removes problems in certain applications.
 
 #Persistent
-SetCapsLockState, AlwaysOff
+SetCapsLockState, AlwaysOff 
 
 Capslock & 1::F1
 Capslock & 2::F2
@@ -53,11 +53,12 @@ Capslock & 0::F10
 Capslock & -::F11
 Capslock & =::F12
 
-Insert & 8::F8
-Insert & 9::F9
-Insert & 0::F10
-Insert & -::F11
-Insert & =::F12
+`; & 8::F8
+`; & 9::F9
+`; & 0::F10
+`; & -::F11
+`; & =::F12
+`; & ::PrintScreen
 Insert & [::Media_Prev
 Insert & ]::Media_Play_Pause
 Insert & \::Media_Next
@@ -69,8 +70,12 @@ Capslock & F4::Media_Prev
 Capslock & F5::Media_Play_Pause
 Capslock & F6::Media_Next
 
-Capslock & `;::Send {XButton1}
-Capslock & '::Send {XButton2}
+Capslock & x::
+If GetKeyState("shift")
+   Send {XButton2}
+else
+   Send {XButton1}
+Return
 
 Capslock & g::SendInput {Shift Down}{F12 Down}
 Capslock & g up::SendInput {Shift up}{F12 up}
@@ -108,22 +113,6 @@ Capslock & y up::SendInput {Blind}{PgUp Up}
 Capslock & h::SendInput {Blind}{PgDn Down}
 Capslock & h up::SendInput {Blind}{PgDn Up}
 
-
-; Capslock + asdf (select all, cut-copy-paste)
-
-Capslock & a::SendInput {Ctrl Down}{a Down}
-Capslock & a up::SendInput {Ctrl Up}{a Up}
-
-Capslock & s::SendInput {Ctrl Down}{x Down}
-Capslock & s up::SendInput {Ctrl Up}{x Up}
-
-Capslock & d::SendInput {Ctrl Down}{c Down}
-Capslock & d up::SendInput {Ctrl Up}{c Up}
-
-Capslock & f::SendInput {Ctrl Down}{v Down}
-Capslock & f up::SendInput {Ctrl Up}{v Up}
-
-
 ; Capslock + wer (close tab or window, press esc)
 
 Capslock & w::SendInput {Ctrl down}{F4}{Ctrl up}
@@ -144,8 +133,8 @@ Capslock & BS::SendInput {Blind}{BS Down}
 
 
 ; Make Capslock & Alt Equivalent to Control+Alt
-!Capslock::SendInput {Ctrl down}{Alt Down}
-!Capslock up::SendInput {Ctrl up}{Alt up}
+; !Capslock::SendInput {Ctrl down}{Alt Down}
+; !Capslock up::SendInput {Ctrl up}{Alt up}
 
 
 ; Capslock + TAB/q (prev/next tab)
@@ -157,10 +146,9 @@ Capslock & q up::SendInput {Ctrl Up}{Tab Up}
 
 ; Capslock + ,/. (undo/redo)
 
-Capslock & ,::SendInput {Ctrl Down}{z Down}
-Capslock & , up::SendInput {Ctrl Up}{z Up}
-Capslock & .::SendInput {Ctrl Down}{y Down}
-Capslock & . up::SendInput {Ctrl Up}{y Up}
+; Capslock & ,::SendInput {Ctrl Down}{z Down}
+; Capslock & , up::SendInput {Ctrl Up}{z Up}
+Capslock & z::^y
 
 
 ; Make Capslock+Space -> Enter
@@ -168,21 +156,21 @@ Capslock & Space::SendInput {Enter Down}
 
 
 ; Numpad using Ctrl+Shift+Alt + m,.jkluio or space
-+^!Space:: SendInput {Numpad0}
-+^!m:: SendInput {Numpad1}
-+^!,:: SendInput {Numpad2}
-+^!.:: SendInput {Numpad3}
-+^!j:: SendInput {Numpad4}
-+^!k:: SendInput {Numpad5}
-+^!l:: SendInput {Numpad6}
-+^!u:: SendInput {Numpad7}
-+^!i:: SendInput {Numpad8}
-+^!o:: SendInput {Numpad9}
+; +^!Space:: SendInput {Numpad0}
+; +^!m:: SendInput {Numpad1}
+; +^!,:: SendInput {Numpad2}
+; +^!.:: SendInput {Numpad3}
+; +^!j:: SendInput {Numpad4}
+; +^!k:: SendInput {Numpad5}
+; +^!l:: SendInput {Numpad6}
+; +^!u:: SendInput {Numpad7}
+; +^!i:: SendInput {Numpad8}
+; +^!o:: SendInput {Numpad9}
 
 
-CapsLock & tab::
-PutText("`t")
-Return
+; CapsLock & tab::
+; PutText("`t")
+; Return
 
 CapsLock & [::
 TempText := GetText()
@@ -192,6 +180,7 @@ Else
    MsgBox Before using this command, select the .ahk file you wish to run in windows explorer.
 Return
 
+; Reload script
 CapsLock & ]::
 KeyWait AppsKey
 IfWinActive %A_ScriptName%
@@ -199,7 +188,7 @@ IfWinActive %A_ScriptName%
 Reload
 Return
 
-CapsLock & z::
+CapsLock & \::
 If NOT IsWindow(WinExist("A"))
    Return
 If GetKeyState("shift")
@@ -210,7 +199,7 @@ Return
 
 CapsLock & v:: #v
 
-CapsLock & x::
+#z::
 SplashImage, , MC01, (S) Shutdown`n(R) Restart`n(L) Log Off`n(H) Hibernate`n(P) Power Saving Mode`n`nPress ESC to cancel., Press A Key:, Shutdown?, Courier New
 Input TempText, L1
 SplashImage, Off
