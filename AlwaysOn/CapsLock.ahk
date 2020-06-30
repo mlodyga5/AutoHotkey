@@ -197,7 +197,7 @@ else
    Winset, Transparent, 128, A
 Return
 
-CapsLock & v:: #v
+CapsLock & b:: #v
 
 #z::
 SplashImage, , MC01, (S) Shutdown`n(R) Restart`n(L) Log Off`n(H) Hibernate`n(P) Power Saving Mode`n`nPress ESC to cancel., Press A Key:, Shutdown?, Courier New

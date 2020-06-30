@@ -18,3 +18,17 @@ Alt + Enter
 
 Back Forward
 Close Window 
+Caps
+Clipboard History V
+Close Window 
+
+Comment Uncomment
+
+Select All
+Ctrl + Enter
+Alt + Enter
+
+Back Forward
+
+Caps & Win
+Close Tab, Close Windows Q W
