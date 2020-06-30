@@ -53,12 +53,12 @@ Capslock & 0::F10
 Capslock & -::F11
 Capslock & =::F12
 
-`; & 8::F8
-`; & 9::F9
-`; & 0::F10
-`; & -::F11
-`; & =::F12
-`; & ::PrintScreen
+; `; & 8::F8
+; `; & 9::F9
+; `; & 0::F10
+; `; & -::F11
+; `; & =::F12
+; `; & p::PrintScreen
 Insert & [::Media_Prev
 Insert & ]::Media_Play_Pause
 Insert & \::Media_Next

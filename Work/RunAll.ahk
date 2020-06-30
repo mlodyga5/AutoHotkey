@@ -1,6 +1,6 @@
 #Include C:\Wszystko\AutoHotkey\_InitialSetup.ahk
 
-#Include _RunVpn.ahk
+#Include RunVpn.ahk
 OpenIfNotAlreadyOpen("rider64.exe", "Platforma")
 
 programsToRun := ["Code", "DBeaver", "FirefoxDev", "Outlook", "Teams"]
