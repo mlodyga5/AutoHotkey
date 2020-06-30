@@ -4,6 +4,5 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 #NoTrayIcon
 #SingleInstance force
 
-root := "C:\Wszystko\AutoHotkey"
+root := "C:\_\AutoHotkey"
 work := root . "\Work"
-personal := root . "\Personal"

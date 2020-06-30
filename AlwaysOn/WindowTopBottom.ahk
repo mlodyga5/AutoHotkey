@@ -1,4 +1,4 @@
-#Include C:\Wszystko\AutoHotkey\_InitialSetup.ahk
+#Include C:\_\AutoHotkey\_InitialSetup.ahk
 
 ; Always on Top
 #A:: Winset, Alwaysontop, , A ; ctrl + space
