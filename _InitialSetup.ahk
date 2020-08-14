@@ -4,5 +4,5 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 #NoTrayIcon
 #SingleInstance force
 
-root := "C:\_\AutoHotkey"
+root := "C:\EG\AutoHotkey"
 work := root . "\Work"

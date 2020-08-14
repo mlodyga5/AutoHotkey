@@ -1,4 +1,4 @@
-#Include C:\_\AutoHotkey\_InitialSetup.ahk
+#Include C:\EG\AutoHotkey\_InitialSetup.ahk
 
 ^!w::Send, Waznekonto1
 ^!t::Send, mlodyga5@gmail.com
